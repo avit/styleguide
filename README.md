@@ -674,11 +674,14 @@ strings.
     end
     ```
 
-0. Omit parentheses around methods arguments that are part of an
-  internal DSL (e.g. Rake, Rails, RSpec), methods that are with
-  "keyword" status in Ruby (e.g. `attr_reader`, `puts`) and attribute
-  access methods. Use parentheses around the arguments of all other
-  method invocations.
+0. Omit parentheses around arguments for:
+
+  * Methods without arguments, such as attribute readers.
+  * Methods with "keyword" status in Ruby (e.g. `attr_reader`, `puts`)
+  * Methods that only perform side-effect actions instead of returning a value.
+  * Internal DSL helper methods (e.g. `link_to`)
+
+  Use parentheses around the arguments of all other method invocations.
 
     ```Ruby
     class Person
