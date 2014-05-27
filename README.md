@@ -166,10 +166,9 @@ at all.
 
 ##4. General Syntax
 
-0. Use spaces around operators, after commas, colons and semicolons, around `{`
-  and before `}`. Whitespace might be (mostly) irrelevant to the Ruby
-  interpreter, but its proper use is the key to writing easily
-  readable code.
+0. Use spaces around operators, after commas, colons and semicolons. Whitespace
+   might be (mostly) irrelevant to the Ruby interpreter, but its proper use is
+   the key to writing easily readable code.
 
     ```Ruby
     sum = 1 + 2
@@ -193,6 +192,14 @@ at all.
     ```Ruby
     some(arg).other
     [1, 2, 3].length
+    ```
+
+0. No spaces inside hash literals or string interpolation. Use spaces in `{  }`
+   for blocks only.
+
+    ```Ruby
+    hash = {one: 1, two: 2}
+    hash.reduce("") { |s, (k, v)| s << "<#{k}:#{v}>" }
     ```
 
 ##5. Strings
@@ -489,10 +496,10 @@ strings.
 
     ```Ruby
     # bad
-    hash = { 'one' => 1, 'two' => 2, 'three' => 3 }
+    hash = {'one' => 1, 'two' => 2, 'three' => 3}
 
     # good
-    hash = { one: 1, two: 2, three: 3 }
+    hash = {one: 1, two: 2, three: 3}
     ```
 
 0. Avoid the use of mutable objects as hash keys.
@@ -502,10 +509,10 @@ strings.
 
     ```Ruby
     # good
-    hash = { one: 1, two: 2, three: 3 }
+    hash = {one: 1, two: 2, three: 3}
 
     # deprecated
-    hash = { :one => 1, :two => 2, :three => 3 }
+    hash = {:one => 1, :two => 2, :three => 3}
     ```
 
 0. Rely on the fact that hashes in 1.9 are ordered.
@@ -517,7 +524,7 @@ strings.
     hash = {one: 1, two: 2}
 
     # good
-    hash = { one: 1, two: 2 }
+    hash = {one: 1, two: 2}
     ```
 
 0. Leave no padding inside the brackets of an array.
