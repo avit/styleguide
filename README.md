@@ -437,7 +437,7 @@ at all.
 ##7. Collections
 
 0. Prefer literal array and hash creation notation (unless you need to
-pass parameters to their constructors, that is).
+pass arguments to their constructors, that is).
 
     ```Ruby
     # bad
@@ -631,7 +631,7 @@ strings.
     end
     ```
 
-0. Indent the parameters of a method call if they span over multiple lines.
+0. Indent the arguments of a method call if they span over multiple lines.
 
     ```Ruby
     # starting point (line is too long)
@@ -674,7 +674,7 @@ strings.
     end
     ```
 
-0. Omit parentheses around parameters for methods that are part of an
+0. Omit parentheses around methods arguments that are part of an
   internal DSL (e.g. Rake, Rails, RSpec), methods that are with
   "keyword" status in Ruby (e.g. `attr_reader`, `puts`) and attribute
   access methods. Use parentheses around the arguments of all other
@@ -738,7 +738,7 @@ strings.
   always use parentheses in the method invocation. For example, write
 `f((3 + 2) + 1)`.
 
-0. If the last parameter is a hash, don't use curly brackets around the arguments.
+0. If the last argument is a hash, don't use curly brackets around the arguments.
 
     ```Ruby
     # bad
