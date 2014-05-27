@@ -23,10 +23,11 @@
 
 0. Leave no trailing whitespace of any kind.
 
-0. Do not leave a blank line at the bottom of the file.
+0. Use Unix-style line endings. This means every line (including the last
+   line!) must be terminated by `\n` (*BSD/Solaris/Linux/OSX users are covered
+   by default, Windows users have to be extra careful.)
 
-0. Use Unix-style line endings. (*BSD/Solaris/Linux/OSX users are covered by default,
-  Windows users have to be extra careful.)
+0. Do not leave additional blank lines at the bottom of the file.
 
 0. Keep lines 94 characters wide or less.
 
